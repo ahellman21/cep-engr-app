@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CEP Engineering Application</title>
+    <title>Aaron Hellman's CEP Engineering Application</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- <p id="info"></p> -->
+    <script src="init.js">myPageInit()</script>
+
+    <script>
+    $(document).ready(function(){
+
+      $("firstName").click(function(){
+        var $this = $(this);
+        $("#firstName").fadeToggle();
+        // $this.fadeToggle();
+            $this.toggleClass('about me');
+          if($this.hasClass('about me')){
+          			$this.text("First Name");
+          		} else {
+          			$this.text(document.getElementById("firstName").innerText = personal_info.firstName;);
+          		}
+
+        $("lastName").fadeToggle();
+        $("jobTitle").fadeToggle();
+        $("homeOffice").fadeToggle();
+      });
+    });
+    </script>
+
   </head>
   <body>
-    // All of your HTML goes here
+    <h1><b>Aaron Hellman</b></h1>
+    <h2>Current Role: Data Analyst</h2>
+
+    <br>
+    <img class="main_pic" src="img/Aaron_Sydney_Opera_House.jpg" width="500" height="300" alt="Aaron Operah House" style="float">
+
+    <!-- <div class="FNcontainer">
+      <img src="img/ww1memorial.jpg" style="width:100%">
+      <button id="firstName" class="btn" onclick="FNchange()" value="First Name">First Name</button>
+    </div> -->
+
+    <div class="divTable">
+      <div class="divTableRow">
+
+        <div class="FNcontainer">
+          <img src="img/ww1memorial.jpg">
+          <button id="firstName" class="btn" onclick="FNchange()" value="First Name">First Name</button>
+        </div>
+
+        <div class="FNcontainer">
+          <img src="img/ww1memorial.jpg">
+          <button id="lastName" class="btn" onclick="LNchange()" value="Last Name">Last Name</button>
+        </div>
+      </div>
+
+    <div class="divTableRow">
+      <div class="FNcontainer">
+        <img src="img/ww1memorial.jpg">
+        <button id="jobTitle" class="btn" onclick="JTchange()" value="Job Title">Job Title</button>
+      </div>
+
+      <div class="FNcontainer">
+        <img src="img/ww1memorial.jpg">
+        <button id="homeOffice" class="btn" onclick="HOchange()" value="Home Office">Home Office</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divTable">
+    <div class="divTableRow">
+      <div class="FNcontainer">
+        <img src="img/ww1memorial.jpg" style="width:50%">
+        <button id="tellMeMore" class="btn" onclick="TMchange()" value="Tell Me More">Tell Me More</button>
+      </div>
+    </div>
+  </div>
+    <!-- <div class="LNcontainer">
+      <img src="img/ww1memorial.jpg" style="width:100%">
+      <button id="lastName" class="btn" onclick="LNchange()" value="Last Name">Last Name</button>
+    </div> -->
+
+    <!-- <div class="JTcontainer">
+      <img src="img/ww1memorial.jpg" style="width:100%">
+      <button id="jobTitel" class="btn" onclick="JTchange()" value="Job Title">Job Title</button>
+    </div>
+
+    <div class="HOcontainer">
+      <img src="img/ww1memorial.jpg" style="width:100%">
+      <button id="homeOffice" class="btn" onclick="HOchange()" value="Home Office">Home Office</button>
+    </div>
+
+    <div class="TMcontainer">
+      <img src="img/ww1memorial.jpg" style="width:100%">
+      <button id="tellMeMore" class="btn" onclick="TMchange()" value="Tell Me More">Tell Me More</button>
+    </div> -->
+     <!-- <button id="firstName" class="aboutmeFN"><b>First Name</b></button>
+
+       <script>
+       function fnFunc() {
+         document.getElementById("firstName").innerText = personal_info.firstName;
+       }
+       </script>
+
+
+     <button id="lastName" class="aboutmeLN"><b>Last Name</b></button>
+     <button id="jobTitle" class="aboutmeJT"><b>Job Title</b></button>
+     <button id="homeOffice" class="aboutmeHO"><b>Home Office</b></button>
+     <button id="tellMeMore" class="aboutmeMO"><b>Tell Me More</b></button> -->
+
+
+    <h3><span class="rainbow">Welcome to my page, I hope your day is <strong>AWESOME!</strong></span></h3>
     <script src="init.js"></script>
   </body>
 </html>
