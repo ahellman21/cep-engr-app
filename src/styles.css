@@ -1,6 +1,7 @@
 html, body {
 	/* background: #000000; */
 	margin: 0;
+  /* background-color: rgb(255, 0, 0); */
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
@@ -18,7 +19,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	padding: 2.5% 2.5% 0;
-	background: white;
+	background: black;
 	line-height: 1.8;
 
   /* background-image: url("/img/ww1memorial.jpg"); */
@@ -32,9 +33,6 @@ body {
 }
 h1 {
   font-size: 55px;
-  /* font-family: Impact, Charcoal, sans-serif; */
-  /* font-family:Tahoma, Geneva, sans-serif; */
-  /* font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif */
 	margin-bottom: 0em;
   text-align: center;
   /* background-image: url("/img/greatoceanroad.jpg"); */
@@ -42,13 +40,26 @@ h1 {
   background-position: top;
   background-attachment: fixed;
   background-size: contain;
-  color: rgb(0, 200, 255);
+  color: rgb(50, 50, 255);
+  text-shadow:
+    -2px -2px 0 #00f,
+    2px -2px 0 #00f,
+    -1px 1px 0 #00f,
+    1px 1px 0 #00f;
+  /* outline-color: rgb(255, 0, 0);
+  outline: inherit;
+  outline-width: medium; */
 }
 h2 {
 	font: 1.3em;
 	margin-bottom: 0em;
   text-align: center;
   font-style: italic;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 h3 {
 	font-size: 1em;
@@ -97,6 +108,7 @@ a:hover {
 
 .FNcontainer {
   display: table-cell;
+  /* position: relative; */
 	padding: 3px 10px;
 }
 .FNcontainer img {
@@ -106,113 +118,31 @@ a:hover {
   margin-right: auto;
 }
 .FNcontainer .btn {
-  /* position: sticky; */
-  vertical-align: baseline;
+  position: absolute;
+  /* position:sticky; */
+  /* vertical-align: baseline; */
   text-align: center;
   display: block;
   margin: auto;
-  /* height: auto; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -100%); */
+  top: 50%
+  left: 50%;
+  transform: translate(0%, -100%);
   /* -ms-transform: translate(-50%, -50%); */
   background-color: #f1f1f1;
   color: black;
   font-size: 16px;
   padding: 16px 30px;
-  border: none;
+  border: black;
   cursor: pointer;
   border-radius: 5px;
-  text-align: center;
 }
 .FNcontainer .btn:hover {
   background-color: black;
   color: white;
 }
-/*
-.LNcontainer {
-  position: inherit;
-  width: 100%;
-  max-width: 400px;
-}
-.LNcontainer img {
-  width: 100%;
-  height: auto;
-}
-.LNcontainer .btn {
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  transform: translate(-100%, -200%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-.LNcontainer .btn:hover {
-  background-color: black;
+.tellMeMore_txt {
+  display: none;
   color: white;
-}
-
-.JTcontainer {
-  position: inherit;
-  width: 100%;
-  max-width: 400px;
-}
-.JTcontainer img {
-  width: 100%;
-  height: auto;
-}
-.JTcontainer .btn {
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  transform: translate(-100%, -200%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
   text-align: center;
+  /* background-color: white; */
 }
-.JTcontainer .btn:hover {
-  background-color: black;
-  color: white;
-}
-
-.HOcontainer {
-  position: inherit;
-  width: 100%;
-  max-width: 400px;
-}
-.HOcontainer img {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-.HOcontainer .btn {
-  position: sticky;
-  top: 50%;
-  left: 50%;
-  transform: translate(-100%, -200%);
-  background-color: #f1f1f1;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-.HOcontainer .btn:hover {
-  background-color: black;
-  color: white;
-} */

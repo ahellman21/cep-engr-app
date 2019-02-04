@@ -5,28 +5,69 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <!-- <p id="info"></p> -->
-    <script src="init.js">myPageInit()</script>
+
+    <script src="init.js"></script>
 
     <script>
     $(document).ready(function(){
 
-      $("firstName").click(function(){
-        var $this = $(this);
-        $("#firstName").fadeToggle();
-        // $this.fadeToggle();
-            $this.toggleClass('about me');
-          if($this.hasClass('about me')){
-          			$this.text("First Name");
-          		} else {
-          			$this.text(document.getElementById("firstName").innerText = personal_info.firstName;);
-          		}
+      $("#firstName").click(function(){
+        var $self = $(this);
+        $self.html();
+        if ($self.html() == "First Name"){
+          $self.Text = personal_info.firstName;
+          $self.html(personal_info.firstName);
+        }
+        else {
+          $self.Text = "First Name";
+          $self.html("First Name");
+        }
+        });
 
-        $("lastName").fadeToggle();
-        $("jobTitle").fadeToggle();
-        $("homeOffice").fadeToggle();
+      $("#lastName").click(function(){
+        var $self = $(this);
+        $self.html();
+        if ($self.html() == "Last Name"){
+          $self.Text = personal_info.lastName;
+          $self.html(personal_info.lastName);
+        }
+        else {
+          $self.Text = "Last Name";
+          $self.html("Last Name");
+        }
+        });
+
+      $("#jobTitle").click(function(){
+        var $self = $(this);
+        $self.html();
+        if ($self.html() == "Job Title"){
+          $self.Text = personal_info.jobTitle;
+          $self.html(personal_info.jobTitle);
+        }
+        else {
+          $self.Text = "Job Title";
+          $self.html("Job Title");
+        }
+        });
+
+      $("#homeOffice").click(function(){
+        var $self = $(this);
+        $self.html();
+        if ($self.html() == "Home Office"){
+          $self.Text = personal_info.homeOffice;
+          $self.html(personal_info.homeOffice);
+        }
+        else {
+          $self.Text = "Home Office";
+          $self.html("Home Office");
+        }
+        });
+
+      $("#tellMeMore").click(function(){
+        $(".tellMeMore_txt").slideToggle("fast");
+        });
       });
-    });
+
     </script>
 
   </head>
@@ -35,36 +76,32 @@
     <h2>Current Role: Data Analyst</h2>
 
     <br>
-    <img class="main_pic" src="img/Aaron_Sydney_Opera_House.jpg" width="500" height="300" alt="Aaron Operah House" style="float">
-
-    <!-- <div class="FNcontainer">
-      <img src="img/ww1memorial.jpg" style="width:100%">
-      <button id="firstName" class="btn" onclick="FNchange()" value="First Name">First Name</button>
-    </div> -->
+    <img class="main_pic" src="img/koala.jpg" width="600" height="400" alt="Aaron Operah House" style="float">
 
     <div class="divTable">
       <div class="divTableRow">
 
         <div class="FNcontainer">
-          <img src="img/ww1memorial.jpg">
-          <button id="firstName" class="btn" onclick="FNchange()" value="First Name">First Name</button>
+          <img src="img/operahouse.jpg" style="transform: rotate(180deg);">
+          <button id="firstName" class="btn" value="First Name">First Name</button>
+          <!-- <button id="firstName" class="btn" onclick="FNchange()" value="First Name">First Name</button> -->
         </div>
 
         <div class="FNcontainer">
           <img src="img/ww1memorial.jpg">
-          <button id="lastName" class="btn" onclick="LNchange()" value="Last Name">Last Name</button>
+          <button id="lastName" class="btn" value="Last Name">Last Name</button>
         </div>
       </div>
 
     <div class="divTableRow">
       <div class="FNcontainer">
-        <img src="img/ww1memorial.jpg">
-        <button id="jobTitle" class="btn" onclick="JTchange()" value="Job Title">Job Title</button>
+        <img src="img/longhorns.jpg" style="transform: rotate(180deg);">
+        <button id="jobTitle" class="btn" value="Job Title">Job Title</button>
       </div>
 
       <div class="FNcontainer">
-        <img src="img/ww1memorial.jpg">
-        <button id="homeOffice" class="btn" onclick="HOchange()" value="Home Office">Home Office</button>
+        <img src="img/mel_dt.jpg" style="transform: rotate(180deg);">
+        <button id="homeOffice" class="btn" value="Home Office">Home Office</button>
       </div>
     </div>
 
@@ -73,44 +110,12 @@
   <div class="divTable">
     <div class="divTableRow">
       <div class="FNcontainer">
-        <img src="img/ww1memorial.jpg" style="width:50%">
-        <button id="tellMeMore" class="btn" onclick="TMchange()" value="Tell Me More">Tell Me More</button>
+        <img src="img/falls.jpg" style="width:50%">
+        <button id="tellMeMore" class="btn" value="Tell Me More" style="transform: translate(175%, -150%)">Tell Me More</button>
+        <p class="tellMeMore_txt">Hi! Welcome to the second website I have ever built. I am currently a data analyst in financial planning and analysis that is implementing machine learning and data science with Python in our fanatical forecasts. I like what I am doing and am happy that it is getting me on a course to be a Data Scientist but feel that I need more technical knowledge to further support my team. That is the reason that I am applying for this course. I hope you like the site!</p>
       </div>
     </div>
   </div>
-    <!-- <div class="LNcontainer">
-      <img src="img/ww1memorial.jpg" style="width:100%">
-      <button id="lastName" class="btn" onclick="LNchange()" value="Last Name">Last Name</button>
-    </div> -->
-
-    <!-- <div class="JTcontainer">
-      <img src="img/ww1memorial.jpg" style="width:100%">
-      <button id="jobTitel" class="btn" onclick="JTchange()" value="Job Title">Job Title</button>
-    </div>
-
-    <div class="HOcontainer">
-      <img src="img/ww1memorial.jpg" style="width:100%">
-      <button id="homeOffice" class="btn" onclick="HOchange()" value="Home Office">Home Office</button>
-    </div>
-
-    <div class="TMcontainer">
-      <img src="img/ww1memorial.jpg" style="width:100%">
-      <button id="tellMeMore" class="btn" onclick="TMchange()" value="Tell Me More">Tell Me More</button>
-    </div> -->
-     <!-- <button id="firstName" class="aboutmeFN"><b>First Name</b></button>
-
-       <script>
-       function fnFunc() {
-         document.getElementById("firstName").innerText = personal_info.firstName;
-       }
-       </script>
-
-
-     <button id="lastName" class="aboutmeLN"><b>Last Name</b></button>
-     <button id="jobTitle" class="aboutmeJT"><b>Job Title</b></button>
-     <button id="homeOffice" class="aboutmeHO"><b>Home Office</b></button>
-     <button id="tellMeMore" class="aboutmeMO"><b>Tell Me More</b></button> -->
-
 
     <h3><span class="rainbow">Welcome to my page, I hope your day is <strong>AWESOME!</strong></span></h3>
     <script src="init.js"></script>
