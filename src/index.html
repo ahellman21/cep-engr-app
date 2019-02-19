@@ -68,6 +68,39 @@
         });
       });
 
+      $("#bookAPI").click(function(){
+       console.log("hii");
+       $.ajax({
+        url:"https://openlibrary.org/api/books?bibkeys=OLID:OL262758W&format=json&jscmd=data",
+        success:function(response){
+          var r=JSON.parse(response);
+          $("#main").html(r.base);
+         }
+       });
+      });
+
+    $("#expeAPI").click(function(){
+      var $self = $(this);
+      (function() {
+        var flickerAPI = "https://api.iextrading.com/1.0/stock/market/batch?symbols=expe&types=quote";
+        $.getJSON( flickerAPI)
+          .done(function( data ) {
+              // do something here;
+              // $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+              // $(latestPrice);
+              $self.Text =data.latestPrice;
+            });
+          });
+
+      fetch('https://api.iextrading.com/1.0/stock/market/batch?symbols=expe&types=quote')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(myJson) {
+          console.log(JSON.stringify(myJson));
+        });
+        });
+
     </script>
 
   </head>
@@ -111,11 +144,33 @@
     <div class="divTableRow">
       <div class="FNcontainer">
         <img src="img/falls.jpg" style="width:50%">
-        <button id="tellMeMore" class="btn" value="Tell Me More" style="transform: translate(175%, -150%)">Tell Me More</button>
-        <p class="tellMeMore_txt">Hi! Welcome to the second website I have ever built. I am currently a data analyst in financial planning and analysis that is implementing machine learning and data science with Python in our fanatical forecasts. I like what I am doing and am happy that it is getting me on a course to be a Data Scientist but feel that I need more technical knowledge to further support my team. That is the reason that I am applying for this course. I hope you like the site!</p>
+        <button id="tellMeMore" class="btn" value="Tell Me More" style="transform: translate(165%, -100%)">Tell Me More</button>
+        <p class="tellMeMore_txt">Hi! Welcome to the second website I have ever built. I am currently a data analyst in financial planning and analysis that is implementing machine learning and data science with Python in our financial forecasts. I like what I am doing and am happy that it is getting me on a course to be a Data Scientist but feel that I need more technical knowledge to further support my team. That is the reason that I am applying for this course. I hope you like the site!</p>
       </div>
     </div>
   </div>
+
+  <!-- API Scripts -->
+  <script type="text/javascript">
+
+  </script>
+
+  <div class="api">
+    <!-- <button id="bookAPI" class="apibtn" onclick="api_fetch(); apiFunc();" value="Favorite Book">Favorite Book</button> -->
+    <!-- <button id="bookAPI" class="apibtn" value="Favorite Book">Favorite Book</button>
+    <div class="api_bookreturn">
+      <p id="api_title">"title"</p>
+      <p id="api_author">"author"</p>
+      <p id="api_image">"image"</p>
+    </div> -->
+
+    <button id="expeAPI" class="apibtn" value="EXPE Stock Price">EXPE Stock Price</button>
+    <div class="api_expe_return">
+      <p id="api_expe">"Stock Price"</p>
+    </div>
+
+  </div>
+
 
     <h3><span class="rainbow">Welcome to my page, I hope your day is <strong>AWESOME!</strong></span></h3>
     <script src="init.js"></script>
