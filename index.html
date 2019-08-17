@@ -17,8 +17,9 @@
     </header>
     <main class="main">
         <section class="main__formSection">
-            <form class="main__formSection__formGroup" onsubmit="return false;" method="POST" action="http://127.0.0.1:8081/" target="trickster">
-                <input id="testt" class="main__formSection__formGroup--input" placeholder="Company Name" list="options">
+            <form class="main__formSection__formGroup" onsubmit="return false;" role="form" method="POST" action="/" target="trickster">
+                <input class="main__formSection__formGroup-input" name="searchTerm" placeholder="Company Name" list="options"
+                onkeydown="if (event.keyCode == 13) {IEXCalloutInput();}">
                     <datalist id="options" class="main__formSection__formGroup--input--datalist"></datalist>
                 <button class="main__formSection__formGroup--submit" type="submit">Search</button>
             </form>
@@ -30,16 +31,17 @@
         </section>
 
         <section class="main__map">
-
         </section>
-        <div class="holder">
-          
-        </div>
+
     </main>
     <footer class="footer">
         <aside class="footer__iex">“Data provided for free by <a href="https://iextrading.com/developer">IEX</a>. View <a href="https://iextrading.com/api-exhibit-a/">IEX’s Terms of Use.</a>”</aside>
     </footer>
 
     <iframe name="trickster" style="display: none;"></iframe>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAzXQkyEciXgnE4cSC6lLfUVCbPaNYHUI"></script> <!-- Script for Google Maps API-->
+    <script src="/script.js"></script> <!-- good ole' homebrewed JS -->
+    
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>

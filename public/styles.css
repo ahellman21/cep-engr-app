@@ -1,0 +1,173 @@
+
+html {
+  /* background: url(img/wallStreet.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  float: center;
+  height: auto;
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  /* text-align: center; */
+}
+
+button {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 6px 30px;
+  border: black;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: 'Merriweather', serif;
+}
+button:hover {
+  background-color: #b71f0b;
+  color: white;
+}
+
+.header_title {
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  display: grid;
+   align-items: center;
+}
+
+/* style for CanvasJS Element */
+
+.main__graph {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+}
+
+#stockContainer {
+    margin: 10px;
+    width: 45%;
+    height: 45%;
+    border: 2px solid black;
+    overflow: hidden;
+    opacity: 0;
+    animation-name: canvas-fade;
+    animation-delay: 0.2s;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#googleTrendContainer {
+    margin: 10px;
+    width: 45%;
+    height: 45%;
+    border: 2px solid black;
+    overflow: hidden;
+    opacity: 0;
+    animation-name: canvas-fade;
+    animation-delay: 0.2s;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes canvas-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.canvasjs-chart-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.canvasjs-chart-canvas {
+    overflow: hidden;
+}
+
+.canvasjs-chart-tooltip div {
+    display: none;
+}
+
+/* end style for CanvasJS Element */
+
+
+.main_formSection_formGroup-input--datalist {
+    max-height: 100px;
+}
+
+.main__formSection__formGroup--input--datalist {
+    max-height: 100px;
+}
+
+.main__formSection__formGroup--input {
+  padding: 10px 10px;
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+  }
+
+  /* Loading box for fun */
+  .loading {
+    position: absolute;
+    animation-name: load;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    width: 100px;
+    height: 40px;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-around;
+    font-style: uppercase;
+    color: white;
+  }
+
+  @keyframes load {
+    0% {
+      transform: rotate(0deg) translateX(-200px);
+    }
+    50% {
+      transform: translateX(200px);
+      background-color: orange;
+    }
+    100% {
+      transform:  translateX(-200px) rotate(360deg);
+      background-color: rebeccapurple;
+    }
+  }

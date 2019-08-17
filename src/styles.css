@@ -1,1 +1,93 @@
-/* All of your CSS goes below */
+html {
+  /* background: url(img/wallStreet.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  float: center;
+  height: auto;
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  /* text-align: center; */
+}
+
+button {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 6px 30px;
+  border: black;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  font-family: 'Merriweather', serif;
+}
+button:hover {
+  background-color: #b71f0b;
+  color: white;
+}
+
+.header_title {
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#stockContainer {
+    /* width: 50%;
+    height: 50%; */
+    border: 2px solid black;
+}
+
+.canvasjs-chart-canvas {
+    position: relative;
+}
+
+.main__formSection__formGroup--input--datalist {
+    max-height: 100px;
+}
+
+.main__formSection__formGroup--input {
+  padding: 10px 10px;
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+   position: relative;
+}
+
+/* .canvasjs-chart-canvas{
+  position: relative;
+} */
+
+.holder {
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+ position: relative;
+ height: 1px;
+}

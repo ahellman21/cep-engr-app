@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Career Exploration Program - 2019 Software Engineering Application Project
 
 Welcome to the application for the CEP Software Engineer track! In this assignment, you'll create a simple "About Me" app using [HTML](https://websitesetup.org/HTML5-cheat-sheet.pdf), [CSS](https://makeawebsitehub.com/css3-mega-cheat-sheet/), and [JavaScript](https://www.cheatography.com/davechild/cheat-sheets/javascript/) / [jQuery](https://oscarotero.com/jquery/).
@@ -91,3 +92,80 @@ You will need to clone this [repo](https://github.com/ideascomealive/cep-engr-ap
 
 ## Support
 Please join the #cep-engr-2019 Slack channel. If you get stuck with any of the pre-work, feel free to reach out here. This channel has your fellow cohort mates, as well as current engineers who are happy to help you get unstuck.
+=======
+# Instructions for cloning repo
+``` Select Clone/Download
+ Copy the SSH
+ Create folder on your personal computer 
+ from the command line
+ run 'cd {your folder path}'
+ run 'git clone {paste SSH here}'
+ ```
+ 
+# group_project1
+First group project - Aaron Hellman, Logan Musselman
+
+IEX Market API URL: https://iextrading.com/developer/docs/#batch-requests
+
+CanvasJS Javascript chart URL Found: https://canvasjs.com/javascript-charts/chart-cursor-crosshair/
+
+CanvasJS Javascript chart docs URL: https://canvasjs.com/docs/charts/basics-of-creating-html5-chart/
+
+Google Trends NPM package docs URL: https://www.npmjs.com/package/google-trends-api
+
+This project uses node modules for webpack to compile: https://www.npmjs.com/package/webpack-node-externals
+
+#### This project will be using google Maps Javascript API
+
+# important information about the IEX Market API
+
+Endpoint information for IEX API -
+
+/ref-data/symbols ---> 
+
+### Symbols Data Parameters
+===============================
+symbol	refers to the symbol represented in Nasdaq Integrated symbology (INET).
+
+name	refers to the name of the company or security.
+
+date	refers to the date the symbol reference data was generated.
+
+isEnabled	will be true if the symbol is enabled for trading on IEX.
+
+ type	refers to the common issue type (
+- AD - ADR
+- RE - REIT
+- CE - Closed end fund
+- SI - Secondary Issue
+- LP - Limited Partnerships
+- CS - Common Stock
+- ET - ETF)
+- iexId	unique ID applied by IEX to track securities through symbol changes.
+
+ /stats/historical?date=YYYYMM -->
+
+(Date must be in the 'YYYYMM' format where YYYY = 4 digit year && MM = 2 digit month ex. 201701 == January 2017 )
+
+will return the months stats for the specified company
+
+ /stock/{symbol}/ohlc ---> 
+
+ ### Stock Parameters 
+ ================
+ price	number	refers to the official open or close price
+
+ high	number	refers to the market-wide highest price from the SIP (15 minute delayed)
+
+ low	number	refers to the market-wide lowest price from the SIP (15 minute delayed)
+
+ time	number	refers to the official listing exchange time for the open or close
+
+ data parameter within this function must be in the following form
+
+     data = [
+         { x: some date, y: somevalue },
+         { x: some date, y: somevalue }
+     ]; 
+
+>>>>>>> e780775f6881214ba1ae7926530321ee516397bd
